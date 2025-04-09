@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FuturisticPortfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&family=Exo+2:wght@400;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-dC2C+dlJAHtRRGVpmEU/xnKJXN4uW3zH9MTN7zceHV/hRnYaFy1s3H1VfQfbq2JZGz2TCV6r5eY+NiRyNltL4g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="custom-cursor"></div>
+  <div class="cursor-trail"></div>
+  <app-root></app-root>
+</body>
+
+<script>
+  if (window.innerWidth > 500) {
+    const cursor = document.querySelector('.custom-cursor');
+    const trail = document.querySelector('.cursor-trail');
+
+    let lastX = window.innerWidth / 2;
+    let lastY = window.innerHeight / 2;
+    let isMoving = false;
+    let idleTimeout;
+
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+
+      cursor.style.left = `${x}px`;
+      cursor.style.top = `${y}px`;
+
+      clearTimeout(idleTimeout);
+      if (!isMoving) {
+        isMoving = true;
+        trail.style.opacity = 1;
+      }
+
+      idleTimeout = setTimeout(() => {
+        trail.style.opacity = 0;
+        isMoving = false;
+      }, 200);
+
+      const dx = x - lastX;
+      const dy = y - lastY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+
+      trail.style.width = `${distance}px`;
+      trail.style.transform = `translate(${lastX}px, ${lastY}px) rotate(${angle}deg)`;
+
+      lastX = x;
+      lastY = y;
+    });
+  }
+</script>
+
+
+
+
+</html>

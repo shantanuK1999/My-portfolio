@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f1b, #00abb7, #181b2e, #0290bb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 0 40px;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Shared styles */
+.custom-cursor,
+.cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Fancy futuristic dot */
+.custom-cursor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #00f0ff;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    animation: pulse 1s infinite ease-in-out;
+    box-shadow:
+        0 0 15px #00f0ff,
+        0 0 30px #00e0ff,
+        0 0 60px #00c4ff;
+}
+
+/* Neon glowing trail with flicker effect */
+.cursor-trail {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(to right, #00f0ff, transparent);
+    border-radius: 50px;
+    opacity: 0;
+    filter: drop-shadow(0 0 6px #00f0ff) blur(1px);
+    transform-origin: left center;
+    transition: opacity 2s ease;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 15px #00f0ff, 0 0 30px #00e0ff, 0 0 60px #00c4ff;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 25px #00f0ff, 0 0 40px #00e0ff, 0 0 80px #00c4ff;
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 6px #00f0ff);
+    }
+
+    50% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 10px #00e0ff);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .custom-cursor,
+    .cursor-trail {
+        display: none !important;
+    }
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #00f0ff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #00d9e6;
+}
+
+.card {
+    background-color: #181b2e;
+    color: white;
+    border-radius: 20px;
+}

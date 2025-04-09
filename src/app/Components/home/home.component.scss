@@ -1,0 +1,283 @@
+/* 🌐 Web View: Show on screen width > 500px */
+@media (min-width: 501px) {
+    .web-navbar {
+        display: flex;
+    }
+
+    .mobile-navbar {
+        display: none !important;
+    }
+}
+
+/* 📱 Mobile View: Show on screen width <= 500px */
+@media (max-width: 500px) {
+    .web-navbar {
+        display: none !important;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-navbar .nav-links {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .mobile-navbar .logo {
+        margin-bottom: 15px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+.portfolio-card {
+    background: #181b2e;
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.3),
+        0 0 80px rgba(0, 255, 255, 0.2),
+        0 20px 40px rgba(0, 255, 255, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.portfolio-card::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 30px;
+    background: rgba(0, 255, 255, 0.3);
+    filter: blur(40px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 40px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 17px;
+    gap: 50px;
+    margin-bottom: 0px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #00f0ff;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 700px;
+
+    h1 {
+        font-size: 48px;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    h3 {
+        font-size: 26px;
+        margin: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 36px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+}
+
+.hero-text h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-text .highlight {
+    color: #00f0ff;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.socials a {
+    margin: 12px;
+    font-size: 24px;
+    color: #00abb7;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #00eaff;
+}
+
+.futuristic-card {
+    font-family: system-ui;
+    background-color: #172135;
+    border-radius: 35px;
+    padding: 2rem 3rem;
+    color: white;
+    box-shadow: 0px 0px 56px 17px #00abb7 !important;
+    transition: box-shadow 0.5s ease;
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 992px) {
+        padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 1.5rem;
+        border-radius: 25px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0px 0px 56px 17px #00abb7;
+    }
+
+    50% {
+        box-shadow: 0px 0px 70px 25px #00eaff;
+    }
+}
+
+.glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+.scroll-down-icon {
+    font-size: 2rem;
+    color: #00f2ff;
+    cursor: pointer;
+    animation: glow 2s infinite;
+}
+
+.scroll-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+    }
+
+    50% {
+        text-shadow: 0 0 5px #00f2ff, 0 0 15px #00f2ff;
+    }
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00f2ff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px #00f2ff88;
+    cursor: pointer;
+    z-index: 999;
+
+    // Start hidden, then fade in
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #00e0ff;
+    }
+}

@@ -1,0 +1,62 @@
+.section-title {
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.experience-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #003a4e, #007f8b);
+    color: white;
+    text-align: center;
+}
+
+.exp-company-info {
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.exp-company-info i {
+    font-size: 2rem;
+    color: #00f0ff;
+    margin-bottom: 0.5rem;
+}
+
+.exp-company-info h3 {
+    margin: 0.5rem 0 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.exp-company-info span {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.exp-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.exp-card {
+    background-color: #0e1a2b;
+    padding: 1.5rem;
+    border-radius: 20px;
+    color: #eee;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: scale(1.05);
+}
+
+.exp-card i {
+    font-size: 1.8rem;
+    color: #00f0ff;
+    margin-bottom: 1rem;
+}

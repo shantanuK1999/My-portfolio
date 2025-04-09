@@ -1,0 +1,21 @@
+<h1 class="section-title text-center mb-5" style="padding-top: 120px;">My Projects</h1>
+
+<section class="skills-section card py-5 text-white" data-aos="fade-up">
+
+    <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>{{ project.title }}</h3>
+                </div>
+                <div class="card-back">
+                    <p>{{ project.description }}</p>
+                    <ul>
+                        <li *ngFor="let tech of project.tech">{{ tech }}</li>
+                    </ul>
+                    <a *ngIf="project.link" [href]="project.link" target="_blank" class="btn btn-outline-info">Visit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
