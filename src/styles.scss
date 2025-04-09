@@ -12,10 +12,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0f0f1b, #00abb7, #181b2e, #0290bb);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    animation: gradientBG 10s ease infinite;
     color: #fff;
     overflow-x: hidden;
     min-height: 100vh;
+}
+
+.padding {
     padding: 0 40px;
 }
 

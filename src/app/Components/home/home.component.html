@@ -1,71 +1,75 @@
-<!-- Web Navbar -->
-<nav class="navbar web-navbar animate__animated animate__fadeInDown">
-    <div class="logo">Welcome to SK'S world !</div>
-    <ul class="nav-links">
+<div class="home-section">
+    <!-- Web Navbar -->
+    <nav class="navbar web-navbar animate__animated animate__fadeInDown">
+        <div class="logo">
+            <img src="./assets/files/Logo.png" alt="" width="200">
+            Welcome to SK'S world !
+        </div>
+        <ul class="nav-links">
+            <li><a (click)="scrollToSection('about')">About</a></li>
+            <li><a (click)="scrollToSection('skills')">Skills</a></li>
+            <li><a (click)="scrollToSection('experience')">Experience</a></li>
+            <li><a (click)="scrollToSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <nav class="navbar d-flex justify-content-center mobile-navbar animate__animated animate__fadeInDown">
+        <img src="./assets/files/Logo.png" alt="" width="200">
+        <!-- <ul class="nav-links ps-0">
         <li><a (click)="scrollToSection('about')">About</a></li>
         <li><a (click)="scrollToSection('skills')">Skills</a></li>
         <li><a (click)="scrollToSection('experience')">Experience</a></li>
         <li><a (click)="scrollToSection('contact')">Contact</a></li>
-    </ul>
-</nav>
+    </ul> -->
+    </nav>
 
-<!-- Mobile Navbar -->
-<nav class="navbar d-flex justify-content-center mobile-navbar animate__animated animate__fadeInDown">
-    <div class="logo">Welcome to SK'S world !</div>
-    <ul class="nav-links ps-0">
-        <li><a (click)="scrollToSection('about')">About</a></li>
-        <li><a (click)="scrollToSection('skills')">Skills</a></li>
-        <li><a (click)="scrollToSection('experience')">Experience</a></li>
-        <li><a (click)="scrollToSection('contact')">Contact</a></li>
-    </ul>
-</nav>
+    <div class="hero mb-5 animate__animated animate__fadeInUp" data-aos="fade-up">
+        <div class="futuristic-card glow-pulse text-center">
+            <div class="hero-text animate__animated animate__fadeInDown">
+                <h4 class="mb-3 mt-2">Hello, It's Me</h4>
+                <h1>Shantanu Kanade</h1>
+                <h3 class="mb-5">And I'm a <span class="highlight">Frontend Developer</span></h3>
 
-<div class="hero mb-5 animate__animated animate__fadeInUp" data-aos="fade-up">
-    <div class="futuristic-card glow-pulse text-center">
-        <div class="hero-text animate__animated animate__fadeInDown">
-            <h4 class="mb-3 mt-2">Hello, It's Me</h4>
-            <h1>Shantanu Kanade</h1>
-            <h3 class="mb-5">And I'm a <span class="highlight">Frontend Developer</span></h3>
+                <div class="socials">
+                    <a href="tel:+917276340501">
+                        <i class="fas fa-phone-alt" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="mailto:shantanukanade2@gmail.com">
+                        <i class="fas fa-envelope" style="font-size: 23px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shantanukanade-sk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
 
-            <div class="socials">
-                <a href="tel:+917276340501">
-                    <i class="fas fa-phone-alt" style="font-size: 20px;"></i>
-                </a>
-                <a href="mailto:shantanukanade2@gmail.com">
-                    <i class="fas fa-envelope" style="font-size: 23px;"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/shantanukanade-sk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
+
+                <a href="./assets/files/Shantanu-Kanade-Resume.pdf" download class="btn mt-5">
+                    <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
-
-
-            <a href="./assets/files/Shantanu-Kanade-Resume.pdf" download class="btn mt-5">
-                <i class="fas fa-download"></i> Download CV
-            </a>
         </div>
+    </div>
+    <div class="scroll-down-icon text-center mt-4">
+        <i class="fas fa-angle-double-down scroll-bounce" (click)="scrollToSection('about')"></i>
     </div>
 </div>
 
-<div class="scroll-down-icon text-center mt-4">
-    <i class="fas fa-angle-double-down scroll-bounce" (click)="scrollToSection('about')"></i>
-</div>
 
-
-<div class="text-center pt-5" id="about" data-aos="fade-up" class="my-section">
+<div class="text-center pt-5 pb-5" id="about" data-aos="fade-up" class="my-section">
     <app-about></app-about>
 </div>
 
-<div class="text-center pt-5" id="skills" data-aos="fade-up">
+<div class="padding text-center pt-5 pb-5" id="skills" data-aos="fade-up">
     <app-skills></app-skills>
 </div>
 
-<div class="text-center pt-5" id="experience" data-aos="fade-up">
+<div class="padding text-center pt-5 pb-5" id="experience" data-aos="fade-up">
     <app-experience></app-experience>
 </div>
 
-<div class="text-center pt-5" id="contact" data-aos="fade-up">
+<div class="padding text-center pt-5 pb-5" id="contact" data-aos="fade-up">
     <app-contact></app-contact>
 </div>
 

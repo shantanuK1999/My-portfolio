@@ -23,7 +23,7 @@ export class AboutComponent {
     },
     {
       icon: 'fas fa-users',
-      text: 'Dependable team player with solid work ethic, ready to contribute skills and knowledge as Angular Developer.'
+      text: 'Dependable team player with solid work ethics, ready to contribute skills and knowledge as Angular Developer.'
     }
   ];
 

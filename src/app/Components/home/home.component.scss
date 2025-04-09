@@ -32,6 +32,26 @@
     }
 }
 
+.home-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/assets/files/BG3.jpg') no-repeat center center / cover;
+        opacity: 0.4; // Adjust this value as needed
+        z-index: -1;
+    }
+}
+
 
 .portfolio-card {
     background: #181b2e;
@@ -65,8 +85,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
-    padding: 40px 0;
 }
 
 .logo {
@@ -79,19 +97,26 @@
     list-style: none;
     display: flex;
     font-size: 17px;
-    gap: 50px;
+    gap: 30px;
     margin-bottom: 0px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #bbb;
-    transition: color 0.3s ease;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-radius 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active {
     color: #00f0ff;
+    background-color: #083d46;
+    border-radius: 23px;
 }
 
 .hero {
@@ -177,7 +202,7 @@
     box-shadow: 0px 0px 56px 17px #00abb7 !important;
     transition: box-shadow 0.5s ease;
     max-width: 100%;
-    width: auto;
+    width: 800px;
     margin: 0 auto;
     text-align: center;
 

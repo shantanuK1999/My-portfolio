@@ -25,18 +25,16 @@ export class SkillsComponent {
     { name: 'Ionic', icon: 'bi-phone', proficiency: 80 },
     { name: 'GitHub', icon: 'bi-github', proficiency: 80 },
     { name: 'SVN', icon: 'bi-folder-symlink-fill', proficiency: 100 },
-    { name: 'Figma', icon: 'bi-bezier2', proficiency: 50 },
+    { name: 'Figma', icon: 'bi-bezier2', proficiency: 80 },
     { name: 'Postman', icon: 'bi-box-arrow-in-up-right', proficiency: 50 },
-    { name: 'RxJS', icon: 'bi-arrow-repeat', proficiency: 85 },
+    { name: 'RxJS', icon: 'bi-arrow-repeat', proficiency: 90 },
     { name: 'DevOps', icon: 'bi-cloud-upload-fill', proficiency: 90 },
-    { name: 'Azure API', icon: 'bi-cloud-check-fill', proficiency: 80 },
+    { name: 'Azure', icon: 'bi-cloud-check-fill', proficiency: 80 },
     { name: 'VS Code', icon: 'bi-terminal-fill', proficiency: 100 },
     { name: 'Visual Studio', icon: 'bi-laptop', proficiency: 100 },
-    { name: 'Android Studio', icon: 'bi-android', proficiency: 75 },
+    { name: 'Android Studio', icon: 'bi-android', proficiency: 80 },
     { name: 'Responsive Design', icon: 'bi-phone-fill', proficiency: 100 },
     { name: 'UI Design', icon: 'bi-palette-fill', proficiency: 100 },
-    { name: 'Testing & Debugging', icon: 'bi-bug-fill', proficiency: 90 },
+    { name: 'Testing & Debugging', icon: 'bi-bug-fill', proficiency: 100 },
   ];
-
-
 }

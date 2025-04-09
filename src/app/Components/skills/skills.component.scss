@@ -6,6 +6,8 @@
 }
 
 .skills-section {
+    background: linear-gradient(135deg, #002f3f, #00565f);
+
     .flip-card {
         perspective: 1000px;
         width: 100%;
@@ -38,7 +40,7 @@
 
         .flip-front {
             background-color: #111;
-            color: #00f2ff;
+            color: white;
             flex-direction: column;
         }
 
