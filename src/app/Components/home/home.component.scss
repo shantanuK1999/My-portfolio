@@ -7,6 +7,10 @@
     .mobile-navbar {
         display: none !important;
     }
+
+    .paddingTop {
+        padding-top: 120px;
+    }
 }
 
 /* 📱 Mobile View: Show on screen width <= 500px */
@@ -29,6 +33,10 @@
         margin-bottom: 15px;
         font-size: 20px;
         text-align: center;
+    }
+
+    .paddingTop {
+        padding-top: none;
     }
 }
 

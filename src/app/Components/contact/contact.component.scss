@@ -69,3 +69,16 @@
     text-align: center;
     margin-bottom: 2rem;
 }
+
+
+
+
+/* 🌐 Web View: Show on screen width > 500px */
+@media (min-width: 501px) {}
+
+/* 📱 Mobile View: Show on screen width <= 500px */
+@media (max-width: 500px) {
+    .marginBottom {
+        margin-bottom: 0px !important;
+    }
+}
