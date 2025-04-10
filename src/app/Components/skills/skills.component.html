@@ -4,12 +4,13 @@
         <h3 class="text-center mb-5" style="font-weight: 600 !important;">Tools & Technologies</h3>
 
         <div class="row justify-content-center">
-            <div class="col-md-3 col-6 mb-4" *ngFor="let tool of tools" data-aos="flip-left" data-aos-delay="150">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-6 mb-4 p-3" *ngFor="let tool of tools"
+                data-aos="flip-left" data-aos-delay="150">
                 <div class="flip-card glass-card">
                     <div class="flip-inner">
-                        <div class="flip-front">
-                            <i class="bi {{ tool.icon }} tool-icon"></i>
-                            <h6>{{ tool.name }}</h6>
+                        <div class="flip-front d-flex justify-content-between align-items-center px-3">
+                            <h3 class="skill-title m-0">{{ tool.name }}</h3>
+                            <i class="bi {{ tool.icon }} tool-icon-big"></i>
                         </div>
                         <div class="flip-back">
                             <div class="text-center">
@@ -19,7 +20,7 @@
                                         style="background-color: #111 !important; border-radius: 20px;">
                                     </div>
                                 </div>
-                                <p class="mt-2" style="font-size: 0.9rem; color: #111;">
+                                <p class="mt-2" style="font-size: 0.9rem; color: #c7c7c7;">
                                     <strong> {{ tool.proficiency }}%</strong>
                                 </p>
                             </div>

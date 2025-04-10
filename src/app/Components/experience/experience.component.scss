@@ -10,7 +10,7 @@
     background: linear-gradient(135deg, #003a4e, #007f8b);
     color: white;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .exp-company-info {
@@ -37,9 +37,23 @@
 
 .exp-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
     justify-items: center;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .exp-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra-large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .exp-cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .exp-card {
