@@ -17,6 +17,8 @@ body {
     color: #fff;
     overflow-x: hidden;
     min-height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 @keyframes gradientBG {
@@ -50,10 +52,11 @@ body {
 
 /* Fancy futuristic dot */
 .custom-cursor {
+    padding: 10px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #00f0ff;
+    background-color: #00eeffe4;
     transform: translate(-50%, -50%);
     z-index: 10000;
     animation: pulse 1s infinite ease-in-out;
