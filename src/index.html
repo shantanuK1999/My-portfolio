@@ -22,15 +22,15 @@
 </body>
 
 <script>
-  // document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('contextmenu', e => e.preventDefault());
 
-  // document.addEventListener('keydown', e => {
-  //   if (e.key === 'F12' ||
-  //     (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
-  //     (e.ctrlKey && e.key === 'U')) {
-  //     e.preventDefault();
-  //   }
-  // });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'U')) {
+      e.preventDefault();
+    }
+  });
 
   if (window.innerWidth > 500) {
     const cursor = document.querySelector('.custom-cursor');
