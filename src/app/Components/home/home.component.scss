@@ -113,7 +113,7 @@
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
-    font-weight: 600;
+    font-weight: 200;
     transition:
         color 0.3s ease,
         background-color 0.3s ease,
@@ -313,4 +313,87 @@
         transform: scale(1.1);
         background-color: #00e0ff;
     }
+}
+
+.offcanvaslink {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+.animationcss {
+    background: linear-gradient(135deg, #0f0f1b, #00abb7, #181b2e, #0290bb);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Advanced Offcanvas Styling */
+.offcanvas {
+    background: linear-gradient(135deg, #0f0f1b, #00abb7, #181b2e, #0290bb);
+    background-size: 400% 400%;
+    color: white;
+    box-shadow: -4px 0 15px rgba(0, 171, 183, 0.4);
+    transition: transform 0.5s ease-in-out;
+    animation: gradientBG 10s ease infinite;
+}
+
+
+/* Close Button */
+.offcanvas-header .btn-close {
+    filter: invert(1);
+    font-size: 1.2rem;
+}
+
+/* Nav Links */
+.offcanvaslink a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.offcanvaslink a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #00abb7;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.offcanvaslink a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.offcanvaslink a:hover {
+    color: #00e0ff;
+}
+
+
+#smooth-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+#smooth-content {
+    will-change: transform;
 }

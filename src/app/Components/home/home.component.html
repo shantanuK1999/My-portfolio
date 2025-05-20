@@ -3,33 +3,65 @@
     <nav class="navbar web-navbar animate__animated animate__fadeInDown">
         <div class="logo">
             <img src="./assets/files/Logo.png" alt="" width="200">
-            Welcome to SK'S world !
         </div>
         <ul class="nav-links d-none d-lg-flex">
-            <li><a (click)="scrollToSection('about')">About</a></li>
-            <li><a (click)="scrollToSection('skills')">Skills</a></li>
-            <li><a (click)="scrollToSection('experience')">Experience</a></li>
-            <li><a (click)="scrollToSection('contact')">Contact</a></li>
+            <li><a (click)="scrollToSection('about')">ABOUT</a></li>
+            <li><a (click)="scrollToSection('skills')">SKILLS</a></li>
+            <li><a (click)="scrollToSection('experience')">EXPERIENCE</a></li>
+            <li><a (click)="scrollToSection('education')">EDUCATION</a></li>
+            <li><a (click)="scrollToSection('contact')">CONTACT</a></li>
         </ul>
     </nav>
 
     <!-- Mobile Navbar -->
-    <nav class="navbar d-flex justify-content-center mobile-navbar animate__animated animate__fadeInDown">
-        <img src="./assets/files/Logo.png" alt="" width="200">
-        <!-- <ul class="nav-links ps-0">
-        <li><a (click)="scrollToSection('about')">About</a></li>
-        <li><a (click)="scrollToSection('skills')">Skills</a></li>
-        <li><a (click)="scrollToSection('experience')">Experience</a></li>
-        <li><a (click)="scrollToSection('contact')">Contact</a></li>
-    </ul> -->
+    <nav
+        class="navbar mobile-navbar d-flex justify-content-between align-items-center px-3 animate__animated animate__fadeInDown">
+        <img src="./assets/files/Logo.png" alt="Logo" width="150">
+
+        <!-- Toggle Button -->
+        <i class="fas fa-bars fa-lg" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"></i>
     </nav>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end animationcss" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column text-center">
+                <li class="nav-item offcanvaslink mb-3">
+                    <a class="nav-link text-white" (click)="scrollToSection('about')" data-bs-dismiss="offcanvas">
+                        <!-- Optional icon -->
+                        <i class="fas fa-user me-2"></i> About
+                    </a>
+                </li>
+                <li class="nav-item offcanvaslink mb-3">
+                    <a class="nav-link text-white" (click)="scrollToSection('skills')" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-cogs me-2"></i> Skills
+                    </a>
+                </li>
+                <li class="nav-item offcanvaslink mb-3">
+                    <a class="nav-link text-white" (click)="scrollToSection('experience')" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-briefcase me-2"></i> Experience
+                    </a>
+                </li>
+                <li class="nav-item offcanvaslink">
+                    <a class="nav-link text-white" (click)="scrollToSection('contact')" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-envelope me-2"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="hero mb-5 animate__animated animate__fadeInUp">
         <div class="futuristic-card glow-pulse text-center">
             <div class="hero-text animate__animated animate__fadeInDown">
                 <h4 class="mb-3 mt-2">Hello, It's Me</h4>
                 <h1>Shantanu Kanade</h1>
-                <h3 class="mb-5">And I'm a <span class="highlight">Frontend Developer</span></h3>
+                <h3 class="mb-3">And I'm a <span class="highlight">Senior Web Developer</span></h3>
+                <h5 class="mb-5"> Welcome to SK'S world !</h5>
 
                 <div class="socials" aria-label="Contact Links">
                     <a href="mailto:shantanukanade2@gmail.com" aria-label="Send email to Shantanu Kanade">
@@ -68,6 +100,10 @@
 
 <div class="padding text-center pt-5 pb-5" id="experience" data-aos="fade-up">
     <app-experience></app-experience>
+</div>
+
+<div class="padding text-center pt-5 pb-5" id="education" data-aos="fade-up">
+    <app-education></app-education>
 </div>
 
 <div class="padding text-center pt-5" id="contact" data-aos="fade-up">

@@ -1,0 +1,30 @@
+<h1 class="section-title" style="padding-top: 100px;">Education</h1>
+
+<section class="skills-section padding card py-5 text-white">
+    <div class="row pt-4 pb-5 justify-content-center">
+        <div class="col-xl-6 col-md-12 mb-4 p-3" *ngFor="let edu of educationList">
+            <div class="card h-100 shadow-card">
+                <!-- Responsive padding: no padding on xs, padding on md and above -->
+                <div class="card-body p-0 p-md-4">
+                    <!-- Desktop & Tablet layout -->
+                    <div class="d-none d-md-flex justify-content-between align-items-center">
+                        <div class="text-start">
+                            <h5 class="mb-1"><strong>{{ edu.title }}</strong></h5>
+                            <p class="mb-0">{{ edu.institute }}</p>
+                        </div>
+                        <div class="text-end">
+                            <span>{{ edu.duration }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile layout -->
+                    <div class="d-block d-md-none text-center">
+                        <h5 class="mb-1"><strong>{{ edu.title }}</strong></h5>
+                        <p class="mb-1">{{ edu.institute }}</p>
+                        <span class="d-block mt-2">{{ edu.duration }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

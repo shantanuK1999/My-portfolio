@@ -1,0 +1,24 @@
+.section-title {
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills-section {
+    background: linear-gradient(135deg, #002f3f, #00565f);
+}
+
+.shadow-card {
+    background-color: #172135;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 171, 183, 0.3);
+}
+
+.shadow-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 235, 255, 0.6);
+}
