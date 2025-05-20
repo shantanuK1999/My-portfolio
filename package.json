@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "deploy": "ng build --base-href=/ --output-path=dist/PersonalWebsite && npx gh-pages -d dist/PersonalWebsite",
     "test": "ng test"
   },
   "private": true,
